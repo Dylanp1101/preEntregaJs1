@@ -4,20 +4,20 @@ function verificarSalud() {
 
     // solo deja  hasta 3 intentos para responder correctamente
     for (let i = 0; i < intentos; i++) {
-        // pregunta si hace ejercicio y si come saludable
-        haceEjercicio = prompt("¿Haces ejercicio regularmente? (sí o no)").toLowerCase();
-        comeSaludable = prompt("¿Comes de forma saludable? (sí o no)").toLowerCase();
+        // pregunta si hace es mayor y si quiere saber de nosotros
+        haceEjercicio = prompt("¿Tenes +18? (sí o no)").toLowerCase();
+        comeSaludable = prompt("¿Buscas informacion sobre nosotros? (sí o no)").toLowerCase();
 
         // Verifica si las respuestas son válidas
         // valide el tilde por las dudas, nose si es correcto 
         if ((haceEjercicio === "sí" || haceEjercicio === "si") && (comeSaludable === "sí" || comeSaludable === "si")) {
-            alert("¡Genial! Estás llevando un estilo de vida saludable.");
+            alert("¡Genial! Estás en el lugar indicado.");
             break 
         } else {
             if (i < intentos - 1) {
                 alert("Tus respuestas no son válidas. Por favor, intenta de nuevo.");
             } else {
-                alert("¡Apúrate! Necesitas enfocarte en tu salud.");
+                alert("Lamentamos que sea asi, gracias.");
             }
         }
     }
